@@ -1,3 +1,14 @@
+// --------- ETAPE 4 --------- //
+const char = document.getElementById("char");
+const n = document.getElementById("n");
+const button = document.getElementById("button");
+const result = document.getElementById("result");
+
+button.addEventListener("click", () => {
+	suiteConway(char.value, n.value);
+});
+
+
 // --------- ETAPE 1 --------- //
 function decoupeChaine(str) {
 	const arr = str.split("");
@@ -42,29 +53,24 @@ function suiteConway(carac, n) {
 	let str = "";
 	str += carac;
 	console.log(str);
+		const f = document.createElement("p");
+		f.innerHTML = str;
+		result.appendChild(f);
 
 	for (let i = 0; i < n - 1; i++) {
 		str = decritChaine(str);
+		const res = document.createElement("p");
+		res.innerHTML = str;
+		result.appendChild(res);
 	}
+	return str;
 }
 
-suiteConway("a", 3);
+// suiteConway("a", 3);
 // a
 // 1a
 // 111a
-
-suiteConway("1", 3);
+// suiteConway("1", 3);
 // 1
 // 11
 // 21
-
-
-// --------- ETAPE 4 --------- //
-// const char = document.getElementById("char");
-// const n = document.getElementById("n");
-// const button = document.getElementById("button");
-// const result = document.getElementById("result");
-
-// button.addEventListener("click", () => {
-//     result.innerHTML = suiteConway(char.value, n.value);
-// })
