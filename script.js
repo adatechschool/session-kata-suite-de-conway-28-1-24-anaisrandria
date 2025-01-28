@@ -48,6 +48,7 @@ function decritChaine(str) {
 decritChaine("ab"); // renvoie "1a1b"
 decritChaine("aabbca"); // renvoie "2a2b1c1a"
 
+
 // --------- ETAPE 3 --------- //
 function suiteConway(carac, n) {
 	let str = "";
